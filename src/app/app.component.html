@@ -1,0 +1,19 @@
+<input type="file" (change)="openFile($event)"/>
+
+<div class="center-table">
+  <table>
+      <tr>
+        <th>Zawodnik</th>
+        <th>Wynik</th>
+        <th *ngFor="let turn of numberOfAllThrows">{{turn + 1}}</th>
+      </tr>
+
+      <tr *ngFor="let person of playersList">
+        <td>{{ person.name }}</td>
+        <td>{{ person.total }}</td>
+        <td *ngFor="let points of person.points">
+        	{{ points }}
+        </td>
+      </tr>
+  </table>
+</div>
